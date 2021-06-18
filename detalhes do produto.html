@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todos os produtos</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+</head>
+<body>
+
+  
+    <div class="container">
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="produtos.html">Produto</a></li>
+                    <li><a href="">Voltar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="">Perfil</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+    </div>
+
+   <!--produto separado-->
+   <div class="small-container single-product">
+      <div class="row">
+          <div class="col-2">
+          <img src="images/gallery-1.jpg" width="100%" id="ProductImg">
+
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="images/gallery-2.jpg" width="100%" class="SmallImg">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/gallery-3.jpg" width="100%"  class="SmallImg">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/gallery-4.jpg" width="100%"  class="SmallImg">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/gallery-1.jpg" width="100%"  class="SmallImg">
+                </div>
+            </div>
+
+
+          </div>
+          <div class="col-2">
+              <p>camiseta Puma</p>
+              <h1>Camiseta vermelha</h1>
+              <h4>R$100</h4>
+              <select>
+                  <option>Selecione o tamanho</option>
+                  <option>Pequena</option>
+                  <option>Media</option>
+                  <option>Grande</option>
+              </select>
+              <input type="number" value="1" min="0" max="5">
+              <a href="carrinho.html" class="btn">Adicionar ao carrinho</a>
+
+              <h3>Detalhes do produto <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>camisa para o verao festas etc etc.</p>
+          </div>
+      </div>
+   </div>
+   <!---titulo-->
+   <div class="small-container">
+       <div class="row row-2">
+           <h2>produtos relacionados</h2>
+            <p> Ver mais</p>
+       </div>
+   </div>
+
+   <!--produtos-->
+
+       <div class="small-container">
+
+
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product-1.jpg">
+                <h4>Camiseta vermelha</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>R$100.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-2.jpg">
+                <h4>Camiseta</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>R$90.00</p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-6.jpg">
+            <h4>Camisa Black</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <p>R$50.00</p>
+         </div>
+         <div class="row">
+        
+         </div>
+   
+    <!---Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                 
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col-2">
+             
+                <p>Baixe o aplicativo Android ou IOS</p>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 Gabriel Kotz</p>
+        </div>
+    </div>
+    <!-------Menu responsivo versao mobile-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxheight = "0px";
+
+        function menutoggle(){
+            if( MenuItems.style.maxheight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px"
+        }
+        else{
+            MenuItems.style.maxHeight = "0px"
+        }
+        }
+
+    </script>
+
+    <!--js produtos galeria-->
+    <script>
+        var ProductImg =document.getElementById("ProductImg");
+        var SmallImg =document.getElementsByClassName("SmallImg");
+    
+         SmallImg[0].onclick = function()
+          {
+            ProductImg.src = SmallImg[0].src;
+          }
+
+          SmallImg[1].onclick = function()
+          {
+            ProductImg.src = SmallImg[1].src;
+          }
+          SmallImg[2].onclick = function()
+          {
+            ProductImg.src = SmallImg[2].src;
+          }
+          SmallImg[3].onclick = function()
+          {
+            ProductImg.src = SmallImg[3].src;
+          }
+          SmallImg[4].onclick = function()
+          {
+            ProductImg.src = SmallImg[4].src;
+          }
+
+    </script>
+
+    </body>
+</html>
