@@ -5,13 +5,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-	<form name="formularioteste" action="mailto:EmailDestinatario@teste123" method="post">
+			<!--#enviar email!-->
+	<form action="https://api.staticforms.xyz/submit" method="post">
+		<input type="hidden" name="accessKey" value="1cdd7d03-14f3-44c8-9f3c-74a31342d06c">
+		<input type="hidden" name="redirectTo" value="">
 		<h1>Contato</h1>
 
 
 		<p class="nome">
-			<input type="text" name="nome" placeholder="Informe seu nome" required="obrigatorio">
+			<input type="text" name="name" placeholder="Informe seu nome" required="obrigatorio">
 		</p>
 
 		<p class="email">
@@ -19,17 +21,17 @@
 		</p>
 
 		<p class="assunto">
-			<input type="text" name="assunto" placeholder="Informe o assunto" required="obrigatorio">
+			<input type="text" name="subject" placeholder="Informe o assunto" required="obrigatorio">
 		</p>
 
 		<p class="mesangem">
-			<textarea name="mensagem" placeholder="deixe sua mensagem" required="obrigatorio"></textarea>
+			<textarea name="message" placeholder="deixe sua mensagem" required="obrigatorio"></textarea>
 		</p>
 
 		<p class="enviar">
 			<input type="submit" name="enviar" value="Enviar">
 		</p>
-	</form>
-
+	
+	</form>	
 </body>
 </html>
